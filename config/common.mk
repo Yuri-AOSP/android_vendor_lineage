@@ -155,6 +155,9 @@ PRODUCT_PACKAGES += \
     LineageSetupWizard
 endif
 
+# Theme, font and icon shape overlays that Vie Suite's pickers list
+$(call inherit-product-if-exists, packages/overlays/Themes/themes.mk)
+
 # Icon pack data overlays. These are PRESIGNED prebuilts that belong in
 # /product/overlay, which android_app_import cannot target, so they are
 # copied rather than built.
