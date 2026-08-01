@@ -150,6 +150,7 @@ endif
 ifeq ($(PRODUCT_IS_AUTOMOTIVE),)
 PRODUCT_PACKAGES += \
     AppLocker \
+    GameSpace \
     LineageParts \
     LineageSetupWizard
 endif
