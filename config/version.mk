@@ -43,3 +43,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION) \
     ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.lineage.releasetype=$(LINEAGE_BUILDTYPE)
+
+# Vie AOSP version properties
+# Mirrors of the above, kept alongside them so nothing that reads the
+# ro.lineage.* namespace has to change.
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.vie.version=$(LINEAGE_VERSION) \
+    ro.vie.display.version=$(LINEAGE_DISPLAY_VERSION) \
+    ro.vie.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
+    ro.vie.releasetype=$(LINEAGE_BUILDTYPE)
