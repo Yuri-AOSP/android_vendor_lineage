@@ -155,6 +155,16 @@ PRODUCT_PACKAGES += \
     LineageSetupWizard
 endif
 
+# Icon pack data overlays. These are PRESIGNED prebuilts that belong in
+# /product/overlay, which android_app_import cannot target, so they are
+# copied rather than built.
+PRODUCT_COPY_FILES += \
+    packages/overlays/Themes/prebuilt/IconDataOne.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/IconDataOne.apk \
+    packages/overlays/Themes/prebuilt/IconDataTwo.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/IconDataTwo.apk \
+    packages/overlays/Themes/prebuilt/IconDataThree.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/IconDataThree.apk \
+    packages/overlays/Themes/prebuilt/IconDataFour.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/IconDataFour.apk \
+    packages/overlays/Themes/prebuilt/IconDataFive.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/IconDataFive.apk
+
 # ParanoidSense face unlock, arm64 only.
 # The device still has to declare android.hardware.biometrics.face itself.
 ifeq ($(TARGET_ARCH),arm64)
