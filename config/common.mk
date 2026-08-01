@@ -155,6 +155,15 @@ PRODUCT_PACKAGES += \
     LineageSetupWizard
 endif
 
+# ParanoidSense face unlock, arm64 only.
+# The device still has to declare android.hardware.biometrics.face itself.
+ifeq ($(TARGET_ARCH),arm64)
+ifeq ($(WITH_FACE_UNLOCK),true)
+PRODUCT_PACKAGES += \
+    FaceUnlock
+endif
+endif
+
 PRODUCT_PACKAGES += \
     LineageSettingsProvider \
     Updater
