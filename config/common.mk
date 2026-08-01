@@ -153,6 +153,7 @@ endif
 
 ifeq ($(PRODUCT_IS_AUTOMOTIVE),)
 PRODUCT_PACKAGES += \
+    AppLocker \
     LineageParts \
     LineageSetupWizard
 endif
