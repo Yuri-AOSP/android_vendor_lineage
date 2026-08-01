@@ -23,7 +23,10 @@ ifeq ($(WITH_GMS),true)
             endif
         endif
    else
-        ifneq (,$(wildcard vendor/partner_gms))
+        ifneq (,$(wildcard vendor/google/gms))
+            # Our own GMS tree, it carries everything in a single makefile
+            $(call inherit-product, vendor/google/gms/config.mk)
+        else ifneq (,$(wildcard vendor/partner_gms))
             # Specify the GMS makefile you want to use, for example:
             #   - fi.mk             - Project Fi
             #   - gms.mk            - default GMS
