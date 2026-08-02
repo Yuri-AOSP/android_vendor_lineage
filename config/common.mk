@@ -158,6 +158,9 @@ endif
 # Theme, font and icon shape overlays that Vie Suite's pickers list
 $(call inherit-product-if-exists, packages/overlays/Themes/themes.mk)
 
+# AxionFx audio effects: the engine libraries and the app that drives them
+$(call inherit-product-if-exists, packages/apps/AxionFx/config.mk)
+
 # ParanoidSense face unlock, arm64 only.
 # The device still has to declare android.hardware.biometrics.face itself.
 ifeq ($(TARGET_ARCH),arm64)
