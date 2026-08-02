@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 The Vie AOSP Project
+# SPDX-License-Identifier: Apache-2.0
+
+type ax_sandbox_service, system_api_service, system_server_service, service_manager_type;
+type game_space_service, system_api_service, system_server_service, service_manager_type;
+type pocket_service, system_api_service, system_server_service, service_manager_type;
+type refresh_rate_ext_service, system_api_service, system_server_service, service_manager_type;
+type theme_engine_service, system_api_service, system_server_service, service_manager_type;
